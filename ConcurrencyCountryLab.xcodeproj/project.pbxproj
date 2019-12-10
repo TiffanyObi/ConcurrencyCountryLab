@@ -19,6 +19,7 @@
 		3E32A2FC239EFF0700771652 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32A2FB239EFF0700771652 /* NetworkHelper.swift */; };
 		3E32A2FE239F010800771652 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32A2FD239F010800771652 /* AppError.swift */; };
 		3E32A300239F0B2B00771652 /* CountryDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32A2FF239F0B2B00771652 /* CountryDataTableViewCell.swift */; };
+		3EA133BB239FE61300D19BB6 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA133BA239FE61300D19BB6 /* CountryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3E32A2FB239EFF0700771652 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		3E32A2FD239F010800771652 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		3E32A2FF239F0B2B00771652 /* CountryDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataTableViewCell.swift; sourceTree = "<group>"; };
+		3EA133BA239FE61300D19BB6 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +94,14 @@
 		3E32A2D4239EF45D00771652 /* ConcurrencyCountryLab */ = {
 			isa = PBXGroup;
 			children = (
-				3E32A2D5239EF45D00771652 /* AppDelegate.swift */,
-				3E32A2D7239EF45D00771652 /* SceneDelegate.swift */,
-				3E32A2D9239EF45D00771652 /* CountryListViewController.swift */,
-				3E32A2FF239F0B2B00771652 /* CountryDataTableViewCell.swift */,
-				3E32A2F9239EF82600771652 /* CountriesData.swift */,
 				3E32A2DB239EF45D00771652 /* Main.storyboard */,
+				3E32A2F9239EF82600771652 /* CountriesData.swift */,
+				3E32A2FF239F0B2B00771652 /* CountryDataTableViewCell.swift */,
+				3E32A2D9239EF45D00771652 /* CountryListViewController.swift */,
+				3EA133BA239FE61300D19BB6 /* CountryDetailViewController.swift */,
+				3E32A2D7239EF45D00771652 /* SceneDelegate.swift */,
 				3E32A2DE239EF46100771652 /* Assets.xcassets */,
+				3E32A2D5239EF45D00771652 /* AppDelegate.swift */,
 				3E32A2E0239EF46100771652 /* LaunchScreen.storyboard */,
 				3E32A2E3239EF46100771652 /* Info.plist */,
 			);
@@ -222,6 +225,7 @@
 				3E32A2FE239F010800771652 /* AppError.swift in Sources */,
 				3E32A2FC239EFF0700771652 /* NetworkHelper.swift in Sources */,
 				3E32A2D6239EF45D00771652 /* AppDelegate.swift in Sources */,
+				3EA133BB239FE61300D19BB6 /* CountryDetailViewController.swift in Sources */,
 				3E32A2D8239EF45D00771652 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

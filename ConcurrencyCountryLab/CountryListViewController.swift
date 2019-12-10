@@ -29,9 +29,21 @@ class CountryListViewController: UIViewController {
         loadCountries()
         seachBar.delegate = self
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let countryDetails = segue.destination as? CountryDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("verify class name in Identity insepctor")
+        }
+        
+        let details = countryList[indexPath.row]
+        
+        countryDetails.countryDetails = details
+        
+        
+    }
 }
 
 extension CountryListViewController: UITableViewDataSource {
@@ -54,6 +66,14 @@ extension CountryListViewController: UITableViewDataSource {
     
 }
 
+extension CountryListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+}
+
 extension CountryListViewController: UISearchBarDelegate {
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        resignFirstResponder()
+    }
 }

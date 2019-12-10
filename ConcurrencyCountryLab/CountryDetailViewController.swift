@@ -1,16 +1,17 @@
 //
-//  CountryDataTableViewCell.swift
+//  CountryDetailViewController.swift
 //  ConcurrencyCountryLab
 //
-//  Created by Tiffany Obi on 12/9/19.
+//  Created by Tiffany Obi on 12/10/19.
 //  Copyright © 2019 Tiffany Obi. All rights reserved.
 //
 
 import UIKit
 
-class CountryDataTableViewCell: UITableViewCell {
+class CountryDetailViewController: UIViewController {
 
-    @IBOutlet weak var countryFlagImage: UIImageView!
+    @IBOutlet weak var flagImage: UIImageView!
+    
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -18,12 +19,15 @@ class CountryDataTableViewCell: UITableViewCell {
     
     @IBOutlet weak var populationLabel: UILabel!
     
-    var country: Country!
+    var countryDetails: Country!
     
-    override func layoutSubviews() {
-        countryFlagImage.layer.cornerRadius = 4
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+      configureCell(for: countryDetails)
     }
     
+
     func configureCell(for country: Country) {
         
     //get image
@@ -34,12 +38,13 @@ class CountryDataTableViewCell: UITableViewCell {
             case .success(let data):
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
-                    self.countryFlagImage.image = image                }
+                    self.flagImage.image = image                }
             }
         }
         
         nameLabel.text = country.name
-        capitalLabel.text = country.capital
-        populationLabel.text = String(country.population)
+        capitalLabel.text = "Capital:\(country.capital)"
+        populationLabel.text = "Population: \(country.population)"
     }
+
 }
